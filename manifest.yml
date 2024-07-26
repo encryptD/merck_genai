@@ -1,0 +1,12 @@
+---
+applications:
+- name: app-merck-genai
+  buildpacks:
+  - python_buildpack
+  command: python3 app.py
+  random-route: true
+- name: chat-merck-genai
+  buildpacks:
+  - python_buildpack
+  command: uvicorn chat_ui:app
+  random-route: true  
